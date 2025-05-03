@@ -9,6 +9,7 @@ class Dado(ABC):
         super().__init__()
         self.lados = lados
 
+    @abstractmethod
     def jogar(self):
         numero_do_dado = randint(1, self.lados + 1)
         return numero_do_dado
@@ -24,39 +25,35 @@ class Classe(ABC):
         self.pontos_defesa = pontos_defesa
         self.limite_habilidades = limite_habilidades
 
+    @abstractmethod
+    def __str__(self):
+        return (f"Nome: {self.nome} | Ataque: {self.pontos_ataque} | Defesa: {self.pontos_defesa} | Tipo de Dado: {self.dado_de_ataque}")
+
 class Habilidade:
     def __init__(self, nome=str, descricao=str, pontos_ataque=str):
         self.nome = nome
         self.descricao = descricao
         self. pontos_ataque = pontos_ataque
 
-    def usar():
-        # Método que simula o uso da habilidade
+    @abstractmethod
+    def usar(self):
         pass
 
 class Personagem(Classe):
     instancias = 0
 
-    def __init__(self, nome_personagem=str, nome=str, pontos_vida=float, dado_de_ataque=int, pontos_ataque=float, pontos_defesa=float, limite_habilidades=int, inventario=list):
+    def __init__(self, nome=str, pontos_vida=float, dado_de_ataque=int, pontos_ataque=float, pontos_defesa=float, limite_habilidades=int, inventario=list):
         super().__init__(nome, pontos_vida, dado_de_ataque, pontos_ataque, pontos_defesa, limite_habilidades)
-        self.nome_personagem = nome_personagem
         self.inventario = inventario
-        Personagem.qntd_instancias()
+        Personagem.instancias += 1
                          
     @classmethod
     def qntd_instancias(cls):
-        cls.instancias += 1
+        return cls.instancias
 
-    def atacar(self, Alvo):
+    def atacar(self, alvo):
         pass
 
-class Arena:
-    lista_de_personagens = list
-
-    @classmethod
-    def adicionar_personagens(cls, personagem):
+    def usar_habilidade(self, alvo):
         pass
 
-    @classmethod
-    def personagens(cls):
-        return Arena.lista_de_personagens
