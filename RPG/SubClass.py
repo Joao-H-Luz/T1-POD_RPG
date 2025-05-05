@@ -26,6 +26,7 @@ class Mago(Classe):
                          limite_habilidades=5)
         
     def __str__(self):
+
         return "Classe: Mago | " + super().__str__()
     
 
@@ -40,7 +41,26 @@ class Ladino(Classe):
         
     def __str__(self):
         return "Classe: Ladino | " + super().__str__()
+    
 
+class Bardo(Classe):
+    def __init__(self, nome):
+        super().__init__(nome,
+                         pontos_vida=5 + (self.pontos_defesa * 2),
+                         dado_de_ataque=D10,
+                         pontos_ataque=5,
+                         pontos_defesa=5,
+                         limite_habilidades=5)
+
+    def __str__(self):
+        return "Classe: Ladino | " + super().__str__()
+
+    def labia(self):
+        pass
+
+    def moral(self):
+        if AumentoMoral in self.limite_habilidades:
+            pass
 
 # SubClass = Habilidade
 class BolaDeFogo(Habilidade):
@@ -68,6 +88,16 @@ class TiroDeArco(Habilidade):
         super().__init__(nome="Disparo com Arco",
                          descricao="Um tiro de arco que causa dano em área.",
                          pontos_ataque=6)
+
+    def usar(self):
+        return super().usar()
+    
+
+class AumentoMoral(Habilidade):
+    def __init__(self, nome=..., descricao=..., pontos_ataque=...):
+        super().__init__(nome="Musica de Batalha",
+                         descricao="O bardo começa a tocar 'Black Sabbath' no meio da batalha.",
+                         pontos_ataque=10)
 
     def usar(self):
         return super().usar()

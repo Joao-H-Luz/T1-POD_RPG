@@ -39,14 +39,19 @@ class Habilidade:
     def usar(self):
         pass
 
-class Personagem(Classe):
+class Personagem:
     instancias = 0
 
-    def __init__(self, nome=str, pontos_vida=float, dado_de_ataque=int, pontos_ataque=float, pontos_defesa=float, limite_habilidades=int, inventario=list):
-        super().__init__(nome, pontos_vida, dado_de_ataque, pontos_ataque, pontos_defesa, limite_habilidades)
+    def __init__(self, nome_personagem=str, inventario=list, Classe=Classe):
+        self.nome_personagem = nome_personagem
+        self.pontos_vida = Classe.self.pontos_vida
+        self.dado_de_ataque = Classe.self.dado_de_ataque
+        self.pontos_ataque = Classe.self.pontos_ataque
+        self.pontos_defes = Classe.self.pontos_defes
+        self.limite_habilidade = Classe.self.limite_habilidade
         self.inventario = inventario
         Personagem.instancias += 1
-                         
+
     @classmethod
     def qntd_instancias(cls):
         return cls.instancias
