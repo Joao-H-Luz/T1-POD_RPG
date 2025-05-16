@@ -5,7 +5,7 @@ from random import randint
 # Classes Obrigatórias:
 
 class Dado(ABC):
-    def __init__(self, lados=int):
+    def __init__(self, lados:int):
         super().__init__()
         self.lados = lados
 
@@ -15,8 +15,8 @@ class Dado(ABC):
         return numero_do_dado
     
 class Classe(ABC):
-    def __init__(self, nome=str, pontos_vida=float, dado_de_ataque=int,
-                 pontos_ataque=float, pontos_defesa=float, limite_habilidades=int):
+    def __init__(self, nome:str, pontos_vida:float, dado_de_ataque:int,
+                 pontos_ataque:float, pontos_defesa:float, limite_habilidades:int):
         super().__init__()
         self.nome = nome
         self.pontos_vida = pontos_vida
@@ -30,7 +30,7 @@ class Classe(ABC):
         return (f"Nome: {self.nome} | Ataque: {self.pontos_ataque} | Defesa: {self.pontos_defesa} | Tipo de Dado: {self.dado_de_ataque}")
 
 class Habilidade:
-    def __init__(self, nome=str, descricao=str, pontos_ataque=str):
+    def __init__(self, nome:str, descricao:str, pontos_ataque:str):
         self.nome = nome
         self.descricao = descricao
         self. pontos_ataque = pontos_ataque
@@ -42,7 +42,7 @@ class Habilidade:
 class Personagem:
     instancias = 0
 
-    def __init__(self, nome_personagem=str, inventario=list, Classe=Classe):
+    def __init__(self, nome_personagem: str, Classe: Classe, inventario: list):
         self.nome_personagem = nome_personagem
         self.pontos_vida = Classe.self.pontos_vida
         self.dado_de_ataque = Classe.self.dado_de_ataque
