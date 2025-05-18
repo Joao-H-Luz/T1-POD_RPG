@@ -1,6 +1,7 @@
 # Bibliotecas Utilizadas
 from abc import ABC, abstractmethod
-from SubClass import D2, BolaDeFogo, Cura, TiroDeArco, Guerreiro, Mago, Ladino
+from .SubClass import D2
+from Tratamento_de_Erros import log_erro
 
 # Classes Obrigatórias:
 #  -================================================================================================================================================-  #
@@ -90,48 +91,70 @@ class Personagem:
     instancias = 0
 
     def __init__(self, nome_personagem: str, classe: Classe, inventario: list):
-        self.nome_personagem = nome_personagem
-        self.pontos_vida = classe.pontos_vida
-        self.dado_de_ataque = classe.dado_de_ataque
-        self.pontos_ataque = classe.pontos_ataque
-        self.pontos_defesa = classe.pontos_defesa
-        self.limite_habilidade = classe.limite_habilidades
-        self.inventario = inventario
-        self.classe = classe.classe
-        Personagem.instancias += 1
+        try:
+            self.nome_personagem = nome_personagem
+            self.pontos_vida = classe.pontos_vida
+            self.dado_de_ataque = classe.dado_de_ataque
+            self.pontos_ataque = classe.pontos_ataque
+            self.pontos_defesa = classe.pontos_defesa
+            self.limite_habilidade = classe.limite_habilidades
+            self.inventario = inventario
+            self.classe = classe.classe
+            Personagem.instancias += 1
+            
+        except Exception as e:  # Tratamento de erro
+            log_erro(e, "Erro na criação do personagem no método __init__ da classe Personagem")
+        raise  # Não mascarar o erro
+
 
     @classmethod
     def qntd_instancias(cls):
         return cls.instancias
 
+
     def atacar(self, alvo):
-        if len(self.inventario) > 0:
-            if D2().jogar() == 2:
-                if self.inventario[0] == "Cura":
-                    self.usar_habilidade(self)
-                    return (f"O Personagem {self.nome} se Curou")
-                else:
-                    self.usar_habilidade(alvo)
-                    return (f"O Personagem {self.nome} se Curou")
-        else:
-            ataque_total = self.dado_de_ataque.jogar()
-            alvo.pontos_vida -= ataque_total
-            return ataque_total
+        try:
+            if len(self.inventario) > 0:
+                if D2().jogar() == 2:
+                    if self.inventario[0] == "Cura":
+                        self.usar_habilidade(self)
+                        return (f"O Personagem {self.nome} se Curou")
+                    else:
+                        self.usar_habilidade(alvo)
+                        return (f"O Personagem {self.nome} se Curou")
+            else:
+                ataque_total = self.dado_de_ataque.jogar()
+                alvo.pontos_vida -= ataque_total
+                return ataque_total
+            
+        except Exception as e: # Tratamento de erro
+            log_erro(e, f"Erro no método atacar do personagem {self.nome_personagem}")
+            raise  # Não mascarar o erro
+
 
     def usar_habilidade(self, alvo):
-        ataque = self.inventario[0].usar(alvo)
-        self.inventario.pop(0)
-        return ataque
+        try:
+            ataque = self.inventario[0].usar(alvo)
+            self.inventario.pop(0)
+            return ataque
+        
+        except Exception as e:  # Tratamento de erro
+            log_erro(e, f"Erro no método usar_habilidade do personagem {self.nome_personagem}")
+            raise  # Não mascarar o erro
+
 
     def __eq__(self, personagem_2):
         return self.nome_personagem == personagem_2.nome_personagem and self.classe == personagem_2.classe
     
+
     def __str__(self):
         return (f"Nome: {self.nome_personagem} | Classe: {self.classe} | Inventario: {self.ver_inventario()}")
     
+
     def __repr__(self):
         return (f"Nome: {self.nome_personagem} | Classe: {self.classe} | Inventario: {self.ver_inventario()}")
     
+
     def ver_inventario(self):
         return ', '.join(str(habilidade) for habilidade in self.inventario)
 

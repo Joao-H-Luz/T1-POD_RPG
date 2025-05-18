@@ -20,7 +20,7 @@ class Guerreiro(Classe):
     
 #  -================================================================================================================================================-  #
 
-class Mago(Classe):
+class Mago(Classe): 
     def __init__(self):
         super().__init__(classe="Mago",
                          pontos_vida=14,
@@ -51,7 +51,7 @@ class Ladino(Classe):
 class Bardo(Classe):
     def __init__(self):
         super().__init__(classe="Bardo",
-                         pontos_vida=5 + (self.pontos_defesa * 2),
+                         pontos_vida=15,
                          dado_de_ataque=D10(),
                          pontos_ataque=5,
                          pontos_defesa=5,
@@ -77,8 +77,12 @@ class BolaDeFogo(Habilidade):
                          pontos_ataque=10)
                          
     def usar(self, alvo):       # Fazer um Metodo que simula uzar a Habilidade
-        alvo.pontos_vida -= self.pontos_ataque
-        return self.pontos_ataque
+        try:
+            alvo.pontos_vida -= self.pontos_ataque
+            return self.pontos_ataque
+        except AttributeError as e:
+            print(f"[Erro] ao usar {self.nome}: alvo inválido - {e}")
+            return 0
     
     def __str__(self):
         return (f"{self.nome}")
@@ -95,14 +99,18 @@ class Cura(Habilidade):
                          pontos_ataque=10)
 
     def usar(self, alvo):       # Fazer um Metodo que simula uzar a Habilidade
-        alvo.pontos_vida += self.pontos_ataque  # Cura O personagem
-        return self.pontos_ataque
-        
+        try:
+            alvo.pontos_vida += self.pontos_ataque  # Cura O personagem
+            return self.pontos_ataque
+        except AttributeError as e:
+            print(f"[Erro] ao usar {self.nome}: alvo inválido - {e}")
+            return 0
+
     def __str__(self):
         return (f"{self.nome}")
 
     def __repr__(self):
-        return (f"{self.nome} | {self.descricao} | Causa {self.pontos_ataque} de Dano")
+        return (f"{self.nome} | {self.descricao} | Recupera {self.pontos_ataque} de Vida")
     
 #  -===============================================-  #
 
@@ -113,8 +121,12 @@ class TiroDeArco(Habilidade):
                          pontos_ataque=6)
 
     def usar(self, alvo):       # Fazer um Metodo que simula uzar a Habilidade
-        alvo.pontos_vida -= self.pontos_ataque
-        return self.pontos_ataque
+        try:
+            alvo.pontos_vida -= self.pontos_ataque
+            return self.pontos_ataque
+        except AttributeError as e:
+            print(f"[Erro] ao usar {self.nome}: alvo inválido - {e}")
+            return 0
 
     def __str__(self):
         return (f"{self.nome}")
@@ -122,21 +134,6 @@ class TiroDeArco(Habilidade):
     def __repr__(self):
         return (f"{self.nome} | {self.descricao} | Causa {self.pontos_ataque} de Dano")
     
-#  -===============================================-  #
-
-class AumentoMoral(Habilidade):
-    def __init__(self):
-        super().__init__(nome="Musica de Batalha",
-                         descricao="O bardo começa a tocar 'Black Sabbath' no meio da batalha.",
-                         pontos_ataque=10)
-
-    def usar(self, alvo):          # Fazer um Metodo que simula uzar a Habilidade
-        alvo.pontos_vida += self.pontos_ataque
-        return self.pontos_ataque
-
-    def __str__(self):
-        return (f"{self.nome} | {self.descricao} | Causa {self.pontos_ataque} de Dano")
-
 #  -================================================================================================================================================-  #
 
 # SubClass || Dado
@@ -148,8 +145,8 @@ class D4(Dado):
         super().__init__(lados=4)
 
     def jogar(self):                # Metodo que Simula jogar o Dado
-        numero_do_dado = randint(1, self.lados)
-        return numero_do_dado
+            numero_do_dado = randint(1, self.lados)
+            return numero_do_dado
     
     def __repr__(self):             # Metodo de Representação da Classe
         return (f"{self.lados} Lados")
