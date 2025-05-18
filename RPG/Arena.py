@@ -110,7 +110,9 @@ class Arena:
         with open(nome_arquivo, "w") as log:
             log.write("--- Combate Free For All ---\n\n")
             print("--- Combate Free For All ---")
-
+#  --------------------------------------------------------------------  #
+            # Dicionário de abates
+            abates = {p.nome_personagem: 0 for p in vivos}
 #  --------------------------------------------------------------------  #
 
             # Lista de Modificação Interna
@@ -118,40 +120,47 @@ class Arena:
             rodada = 1
 
 # Começo da Batalha
-            while len(vivos) > 1:                       # Verificação de parada, compara se ainda tem combatentes ativos (minimo 2)
-                log.write(f"--- Rodada {rodada} ---\n")
-                print(f"--- Rodada {rodada} ---")
+        while len(vivos) > 1:
+            log.write(f"--- Rodada {rodada} ---\n")
+            print(f"--- Rodada {rodada} ---")
 
-                for atacante in vivos.copy():
-                    if atacante.pontos_vida <= 0:       # Pula o personagem morto
-                        continue  
+            for atacante in vivos.copy():
+                if atacante.pontos_vida <= 0:
+                    continue
 
-                    alvos_possiveis = [p for p in vivos if p != atacante and p.pontos_vida > 0] # Lista de Alvos disponives
-                    if not alvos_possiveis:
-                        break                           # Ninguém mais pra atacar
+                alvos_possiveis = [p for p in vivos if p != atacante and p.pontos_vida > 0]
+                if not alvos_possiveis:
+                    break
 
-                    alvo = random.choice(alvos_possiveis) # O alvo é escolhido aleatóriamente
-                    chance_de_ataque = D20().jogar() + atacante.pontos_ataque
+                alvo = random.choice(alvos_possiveis)
+                chance_de_ataque = D20().jogar() + atacante.pontos_ataque
 
-                    if chance_de_ataque > alvo.pontos_defesa:
-                        dano = atacante.atacar(alvo)
-                        log.write(f"{atacante.nome_personagem} atacou com {dano} de Dano. Vida restante de {alvo.nome_personagem}: {alvo.pontos_vida}\n")
+                if chance_de_ataque > alvo.pontos_defesa:
+                    dano = atacante.atacar(alvo)
+                    log.write(f"{atacante.nome_personagem} atacou com {dano} de Dano. Vida restante de {alvo.nome_personagem}: {alvo.pontos_vida}\n")
+                else:
+                    log.write(f"{atacante.nome_personagem} errou o ataque!\n")
 
-                    else:
-                        log.write(f"{atacante.nome_personagem} errou o ataque!\n")
+                if alvo.pontos_vida <= 0:
+                    log.write(f"💀 {alvo.nome_personagem} foi eliminado por {atacante.nome_personagem}!\n")
+                    print(f"💀 {alvo.nome_personagem} foi eliminado por {atacante.nome_personagem}!")
+                    abates[atacante.nome_personagem] += 1
+                    vivos.remove(alvo)
 
-                    # Remove da lista de vivos se morreu
-                    if alvo.pontos_vida <= 0:
-                        log.write(f"💀 {alvo.nome_personagem} foi eliminado!\n")
-                        print(f"💀 {alvo.nome_personagem} foi eliminado!")
-                        vivos.remove(alvo)
+                log.write("\n")
+            rodada += 1
 
-                    log.write("\n")
-                rodada += 1
+        vencedor = vivos[0]
+        log.write(f"\n🏆 {vencedor.nome_personagem} venceu o Free For All!\n")
+        print(f"\n🏆 {vencedor.nome_personagem} venceu o Free For All!\n")
 
-            vencedor = vivos[0]
-            log.write(f"\n🏆 {vencedor.nome_personagem} venceu o Free For All!\n")
-            print(f"\n🏆 {vencedor.nome_personagem} venceu o Free For All!\n")
+        # Exibir o ranking de abates
+        ranking = sorted(abates.items(), key=lambda x: x[1], reverse=True)
+        log.write("\n📊 Ranking de Abates:\n")
+        print("📊 Ranking de Abates:")
+        for nome, kills in ranking:
+            log.write(f"- {nome} eliminou {kills}\n")
+            print(f"- {nome} eliminou {kills}")
 
         print(f"📄 Log salvo em: {nome_arquivo}")
 
