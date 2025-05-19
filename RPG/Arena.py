@@ -218,7 +218,7 @@ def combate_onda(lista_herois):
                                  "bardo" and p.pontos_vida > 0 for p in vivos)
                 if bardo_vivo:
                     chance_bardo = random.random()
-                    if chance_bardo <= 0.25:
+                    if chance_bardo <= 0.50:
                         mensagem_bardo = "O bardo mandou aquela cantoria épica de 2 minutos de duração... até o Lorde Abissal pensou 'já perdi, vou deixar passar'."
                         log.write(mensagem_bardo + "\n")
                         print(mensagem_bardo)
