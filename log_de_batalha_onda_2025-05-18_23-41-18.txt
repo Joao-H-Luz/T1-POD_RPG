@@ -1,0 +1,226 @@
+--- Combate em Onda ---
+
+
+--- Rodada 1 ---
+Aragorn atacou Inimigo 2 com 8 de dano. Vida restante: 7
+Gandalf atacou Inimigo 2 com 10 de dano. Vida restante: -3
+Inimigo 2 foi eliminado!
+Legolas atacou Inimigo 1 com 7 de dano. Vida restante: 8
+Boromir atacou Inimigo 1 com 10 de dano. Vida restante: -2
+Inimigo 1 foi eliminado!
+
+Fim da rodada 1.
+
+--- Rodada 2 ---
+Aragorn atacou Inimigo 1 com 6 de dano. Vida restante: 9
+Gandalf atacou Inimigo 2 com 10 de dano. Vida restante: 25
+Legolas atacou Inimigo 1 com 6 de dano. Vida restante: 3
+Boromir atacou Inimigo 2 com 4 de dano. Vida restante: 21
+Saruman atacou Inimigo 2 com 11 de dano. Vida restante: 10
+Inimigo 1 atacou Saruman com 5 de dano. Vida restante: 9
+Inimigo 2 atacou Saruman com 4 de dano. Vida restante: 5
+Inimigo 3 atacou Aragorn com 0 de dano. Vida restante: 50
+Inimigo 4 atacou Saruman com 6 de dano. Vida restante: -1
+Saruman foi eliminado!
+Aragorn atacou Inimigo 4 com 10 de dano. Vida restante: 25
+Gandalf atacou Inimigo 1 com 9 de dano. Vida restante: -6
+Inimigo 1 foi eliminado!
+Legolas atacou Inimigo 3 com 4 de dano. Vida restante: 11
+Boromir atacou Inimigo 4 com 6 de dano. Vida restante: 19
+Inimigo 2 atacou Aragorn com 3 de dano. Vida restante: 47
+Inimigo 3 atacou Legolas com 3 de dano. Vida restante: 18
+Inimigo 4 atacou Gandalf com 7 de dano. Vida restante: 7
+Aragorn atacou Inimigo 4 com 4 de dano. Vida restante: 15
+Gandalf atacou Inimigo 4 com 6 de dano. Vida restante: 9
+Legolas atacou Inimigo 2 com 10 de dano. Vida restante: 20
+Boromir atacou Inimigo 4 com 11 de dano. Vida restante: -2
+Inimigo 4 foi eliminado!
+Inimigo 2 atacou Legolas com 6 de dano. Vida restante: 12
+Inimigo 3 atacou Gandalf com 6 de dano. Vida restante: 1
+Aragorn atacou Inimigo 2 com 7 de dano. Vida restante: 13
+Gandalf atacou Inimigo 2 com 10 de dano. Vida restante: 3
+Legolas atacou Inimigo 2 com 8 de dano. Vida restante: -5
+Inimigo 2 foi eliminado!
+Boromir atacou Inimigo 3 com 4 de dano. Vida restante: 7
+Inimigo 3 atacou Gandalf com 6 de dano. Vida restante: -5
+Gandalf foi eliminado!
+Aragorn atacou Inimigo 3 com 8 de dano. Vida restante: -1
+Inimigo 3 foi eliminado!
+
+Fim da rodada 2.
+
+--- Rodada 3 ---
+Aragorn atacou Inimigo 4 com 3 de dano. Vida restante: 12
+Legolas atacou Inimigo 5 com 9 de dano. Vida restante: 6
+Boromir atacou Inimigo 3 com 5 de dano. Vida restante: 10
+Inimigo 1 atacou Boromir com 0 de dano. Vida restante: 50
+Inimigo 2 atacou Boromir com 0 de dano. Vida restante: 50
+Inimigo 3 atacou Boromir com 2 de dano. Vida restante: 48
+Inimigo 4 atacou Aragorn com 3 de dano. Vida restante: 44
+Inimigo 5 atacou Legolas com 2 de dano. Vida restante: 10
+Inimigo 6 atacou Legolas com 5 de dano. Vida restante: 5
+Aragorn atacou Inimigo 3 com 9 de dano. Vida restante: 1
+Legolas atacou Inimigo 2 com 4 de dano. Vida restante: 11
+Boromir atacou Inimigo 4 com 3 de dano. Vida restante: 9
+Inimigo 1 errou o ataque em Boromir.
+Inimigo 2 atacou Legolas com 3 de dano. Vida restante: 2
+Inimigo 3 atacou Legolas com 6 de dano. Vida restante: -4
+Legolas foi eliminado!
+Inimigo 4 atacou Boromir com 1 de dano. Vida restante: 47
+Inimigo 5 atacou Aragorn com 1 de dano. Vida restante: 43
+Inimigo 6 atacou Boromir com 0 de dano. Vida restante: 47
+Aragorn atacou Inimigo 5 com 12 de dano. Vida restante: -6
+Inimigo 5 foi eliminado!
+Boromir atacou Inimigo 1 com 2 de dano. Vida restante: 13
+Inimigo 1 atacou Boromir com 0 de dano. Vida restante: 47
+Inimigo 2 atacou Aragorn com 0 de dano. Vida restante: 43
+Inimigo 3 atacou Boromir com 0 de dano. Vida restante: 47
+Inimigo 4 atacou Aragorn com 0 de dano. Vida restante: 43
+Inimigo 6 atacou Boromir com 0 de dano. Vida restante: 47
+Aragorn atacou Inimigo 6 com 13 de dano. Vida restante: 2
+Boromir atacou Inimigo 3 com 4 de dano. Vida restante: -3
+Inimigo 3 foi eliminado!
+Inimigo 1 atacou Boromir com 0 de dano. Vida restante: 47
+Inimigo 2 atacou Aragorn com 1 de dano. Vida restante: 42
+Inimigo 4 atacou Boromir com 0 de dano. Vida restante: 47
+Inimigo 6 errou o ataque em Boromir.
+Aragorn atacou Inimigo 1 com 11 de dano. Vida restante: 2
+Boromir atacou Inimigo 6 com 8 de dano. Vida restante: -6
+Inimigo 6 foi eliminado!
+Inimigo 1 atacou Aragorn com 1 de dano. Vida restante: 41
+Inimigo 2 atacou Aragorn com 0 de dano. Vida restante: 41
+Inimigo 4 errou o ataque em Aragorn.
+Aragorn atacou Inimigo 4 com 8 de dano. Vida restante: 1
+Boromir atacou Inimigo 4 com 5 de dano. Vida restante: -4
+Inimigo 4 foi eliminado!
+Inimigo 1 errou o ataque em Aragorn.
+Inimigo 2 errou o ataque em Boromir.
+Aragorn atacou Inimigo 2 com 13 de dano. Vida restante: -2
+Inimigo 2 foi eliminado!
+Boromir atacou Inimigo 1 com 9 de dano. Vida restante: -7
+Inimigo 1 foi eliminado!
+
+Fim da rodada 3.
+
+--- Rodada 4 ---
+Aragorn atacou Inimigo 7 com 12 de dano. Vida restante: 3
+Boromir atacou Inimigo 1 com 3 de dano. Vida restante: 12
+Inimigo 1 atacou Boromir com 0 de dano. Vida restante: 47
+Inimigo 2 atacou Aragorn com 0 de dano. Vida restante: 41
+Inimigo 3 errou o ataque em Aragorn.
+Inimigo 4 atacou Aragorn com 1 de dano. Vida restante: 40
+Inimigo 5 atacou Aragorn com 0 de dano. Vida restante: 40
+Inimigo 6 atacou Boromir com 1 de dano. Vida restante: 46
+Inimigo 7 atacou Boromir com 3 de dano. Vida restante: 43
+Inimigo 8 errou o ataque em Aragorn.
+Aragorn atacou Inimigo 7 com 7 de dano. Vida restante: -4
+Inimigo 7 foi eliminado!
+Boromir atacou Inimigo 5 com 5 de dano. Vida restante: 10
+Inimigo 1 atacou Boromir com 3 de dano. Vida restante: 40
+Inimigo 2 errou o ataque em Aragorn.
+Inimigo 3 atacou Boromir com 0 de dano. Vida restante: 40
+Inimigo 4 atacou Aragorn com 0 de dano. Vida restante: 40
+Inimigo 5 errou o ataque em Boromir.
+Inimigo 6 atacou Boromir com 3 de dano. Vida restante: 37
+Inimigo 8 atacou Boromir com 3 de dano. Vida restante: 34
+Aragorn atacou Inimigo 6 com 10 de dano. Vida restante: 5
+Boromir atacou Inimigo 6 com 7 de dano. Vida restante: -2
+Inimigo 6 foi eliminado!
+Inimigo 1 errou o ataque em Aragorn.
+Inimigo 2 atacou Aragorn com 0 de dano. Vida restante: 40
+Inimigo 3 atacou Boromir com 0 de dano. Vida restante: 34
+Inimigo 4 atacou Boromir com 3 de dano. Vida restante: 31
+Inimigo 5 atacou Aragorn com 0 de dano. Vida restante: 40
+Inimigo 8 atacou Boromir com 2 de dano. Vida restante: 29
+Aragorn atacou Inimigo 2 com 9 de dano. Vida restante: 6
+Boromir atacou Inimigo 3 com 5 de dano. Vida restante: 10
+Inimigo 1 errou o ataque em Aragorn.
+Inimigo 2 atacou Aragorn com 0 de dano. Vida restante: 40
+Inimigo 3 errou o ataque em Aragorn.
+Inimigo 4 atacou Boromir com 0 de dano. Vida restante: 29
+Inimigo 5 atacou Aragorn com 0 de dano. Vida restante: 40
+Inimigo 8 errou o ataque em Boromir.
+Aragorn atacou Inimigo 5 com 5 de dano. Vida restante: 5
+Boromir atacou Inimigo 5 com 3 de dano. Vida restante: 2
+Inimigo 1 errou o ataque em Boromir.
+Inimigo 2 atacou Aragorn com 0 de dano. Vida restante: 40
+Inimigo 3 atacou Boromir com 2 de dano. Vida restante: 27
+Inimigo 4 errou o ataque em Boromir.
+Inimigo 5 errou o ataque em Boromir.
+Inimigo 8 atacou Aragorn com 2 de dano. Vida restante: 38
+Aragorn atacou Inimigo 3 com 5 de dano. Vida restante: 5
+Boromir atacou Inimigo 3 com 3 de dano. Vida restante: 2
+Inimigo 1 atacou Aragorn com 0 de dano. Vida restante: 38
+Inimigo 2 atacou Aragorn com 0 de dano. Vida restante: 38
+Inimigo 3 atacou Boromir com 0 de dano. Vida restante: 27
+Inimigo 4 atacou Aragorn com 1 de dano. Vida restante: 37
+Inimigo 5 errou o ataque em Aragorn.
+Inimigo 8 errou o ataque em Aragorn.
+Aragorn atacou Inimigo 3 com 3 de dano. Vida restante: -1
+Inimigo 3 foi eliminado!
+Boromir atacou Inimigo 5 com 7 de dano. Vida restante: -5
+Inimigo 5 foi eliminado!
+Inimigo 1 atacou Aragorn com 3 de dano. Vida restante: 34
+Inimigo 2 errou o ataque em Aragorn.
+Inimigo 4 errou o ataque em Boromir.
+Inimigo 8 errou o ataque em Boromir.
+Aragorn atacou Inimigo 4 com 6 de dano. Vida restante: 9
+Boromir atacou Inimigo 2 com 13 de dano. Vida restante: -7
+Inimigo 2 foi eliminado!
+Inimigo 1 atacou Boromir com 1 de dano. Vida restante: 26
+Inimigo 4 atacou Aragorn com 3 de dano. Vida restante: 31
+Inimigo 8 atacou Boromir com 0 de dano. Vida restante: 26
+Aragorn atacou Inimigo 8 com 6 de dano. Vida restante: 9
+Boromir atacou Inimigo 4 com 5 de dano. Vida restante: 4
+Inimigo 1 errou o ataque em Aragorn.
+Inimigo 4 errou o ataque em Aragorn.
+Inimigo 8 atacou Boromir com 2 de dano. Vida restante: 24
+Aragorn atacou Inimigo 8 com 5 de dano. Vida restante: 4
+Boromir atacou Inimigo 1 com 8 de dano. Vida restante: 4
+Inimigo 1 atacou Aragorn com 3 de dano. Vida restante: 28
+Inimigo 4 atacou Aragorn com 0 de dano. Vida restante: 28
+Inimigo 8 atacou Aragorn com 0 de dano. Vida restante: 28
+Aragorn atacou Inimigo 1 com 11 de dano. Vida restante: -7
+Inimigo 1 foi eliminado!
+Boromir atacou Inimigo 8 com 6 de dano. Vida restante: -2
+Inimigo 8 foi eliminado!
+Inimigo 4 atacou Boromir com 1 de dano. Vida restante: 23
+Aragorn atacou Inimigo 4 com 12 de dano. Vida restante: -8
+Inimigo 4 foi eliminado!
+
+Fim da rodada 4.
+
+--- Rodada 5 ---
+Boss chegou: Lorde Abissal!
+Aragorn atacou Inimigo 5 com 9 de dano. Vida restante: 6
+Boromir atacou Inimigo 1 com 8 de dano. Vida restante: 7
+Lorde Abissal atacou Aragorn com 14 de dano. Vida restante: 14
+Inimigo 1 atacou Aragorn com 1 de dano. Vida restante: 13
+Inimigo 2 atacou Boromir com 0 de dano. Vida restante: 23
+Inimigo 3 atacou Aragorn com 2 de dano. Vida restante: 11
+Inimigo 4 errou o ataque em Aragorn.
+Inimigo 5 atacou Boromir com 3 de dano. Vida restante: 20
+Inimigo 6 errou o ataque em Aragorn.
+Inimigo 7 atacou Aragorn com 0 de dano. Vida restante: 11
+Inimigo 8 atacou Boromir com 3 de dano. Vida restante: 17
+Inimigo 9 errou o ataque em Aragorn.
+Aragorn atacou Inimigo 4 com 3 de dano. Vida restante: 12
+Boromir atacou Lorde Abissal com 0 de dano. Vida restante: 200
+Lorde Abissal atacou Boromir com 19 de dano. Vida restante: -2
+Boromir foi eliminado!
+Inimigo 1 atacou Aragorn com 0 de dano. Vida restante: 11
+Inimigo 2 atacou Aragorn com 0 de dano. Vida restante: 11
+Inimigo 3 atacou Aragorn com 0 de dano. Vida restante: 11
+Inimigo 4 atacou Aragorn com 0 de dano. Vida restante: 11
+Inimigo 5 errou o ataque em Aragorn.
+Inimigo 6 atacou Aragorn com 3 de dano. Vida restante: 8
+Inimigo 7 atacou Aragorn com 0 de dano. Vida restante: 8
+Inimigo 8 atacou Aragorn com 3 de dano. Vida restante: 5
+Inimigo 9 errou o ataque em Aragorn.
+Aragorn atacou Inimigo 7 com 6 de dano. Vida restante: 9
+Lorde Abissal atacou Aragorn com 16 de dano. Vida restante: -11
+Aragorn foi eliminado!
+
+Todos os heróis foram derrotados!
+
+Os heróis foram derrotados antes de chegar ao fim das 10 rodadas.
