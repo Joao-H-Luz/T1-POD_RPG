@@ -35,7 +35,6 @@ class Classe(ABC):
 
 # SubClass || Classe
 
-
 class Guerreiro(Classe):
     def __init__(self):
         super().__init__(classe="Guerreiro",
@@ -49,7 +48,6 @@ class Guerreiro(Classe):
         return (f"Classe: {self.classe} | Ataque: {self.pontos_ataque} | Defesa: {self.pontos_defesa} | Tipo de Dado: {self.dado_de_ataque}")
 
 #  -================================================================================================================================================-  #
-
 
 class Mago(Classe):
     def __init__(self):
@@ -65,7 +63,6 @@ class Mago(Classe):
 
 #  -================================================================================================================================================-  #
 
-
 class Ladino(Classe):
     def __init__(self):
         super().__init__(classe="Ladino",
@@ -79,7 +76,6 @@ class Ladino(Classe):
         return (f"Classe: {self.classe} | Ataque: {self.pontos_ataque} | Defesa: {self.pontos_defesa} | Tipo de Dado: {self.dado_de_ataque}")
 
 #  -================================================================================================================================================-  #
-
 
 class Bardo(Classe):
     def __init__(self):
@@ -109,11 +105,10 @@ class Barbaro(Classe):
 
 #  -================================================================================================================================================-  #
 
-
 class Lorde_Abissal(Classe):
     def __init__(self):
         super().__init__(classe="Lorde Abissal",
-                         pontos_vida=200,
+                         pontos_vida=100,
                          dado_de_ataque=D20(),
                          pontos_ataque=10,
                          pontos_defesa=10,
@@ -128,7 +123,7 @@ class Lorde_Abissal(Classe):
 class Smaug_Dourado(Classe):
     def __init__(self):
         super().__init__(classe="🐉 Smaug, o Dourado",
-                         pontos_vida=250,
+                         pontos_vida=200,
                          dado_de_ataque=D20(),
                          pontos_ataque=10,
                          pontos_defesa=12,

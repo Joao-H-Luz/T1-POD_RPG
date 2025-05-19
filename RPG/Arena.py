@@ -189,30 +189,26 @@ def combate_onda(lista_herois):
 
             # Criar inimigos da rodada (onda cresce: rodada * 2 inimigos)
             inimigos = []
-            qtd_inimigos = rodada * 2
 
-            # Boss na rodada 5: Lorde Abissal
             if rodada == 5:
-                boss = Personagem(nome_personagem="Lorde Abissal",classe=Lorde_Abissal(), inventario=[])
+                boss = Personagem(nome_personagem="Lorde Abissal",
+                                  classe=Lorde_Abissal(), inventario=[])
                 inimigos.append(boss)
-                qtd_inimigos -= 1
                 log.write(f"Boss chegou: {boss.nome_personagem}!\n")
                 print(f"Boss chegou: {boss.nome_personagem}!")
-
-            # Boss na rodada 10: Smaug, o Dourado
-            if rodada == 10:
-                boss = Personagem(nome_personagem="🐉 Smaug, o Dourado", classe=Smaug_Dourado(), inventario=[])
+            elif rodada == 10:
+                boss = Personagem(nome_personagem="🐉 Smaug, o Dourado",
+                                  classe=Smaug_Dourado(), inventario=[])
                 inimigos.append(boss)
-                qtd_inimigos -= 1
                 log.write(f"Boss chegou: {boss.nome_personagem}!\n")
                 print(f"Boss chegou: {boss.nome_personagem}!")
-
-            # Criar inimigos comuns restantes
-            for i in range(qtd_inimigos):
-                inimigo = Personagem(nome_personagem=f"Inimigo {i+1}",
-                    classe= Barbaro(),
-                    inventario= [])
-                inimigos.append(inimigo)
+            else:
+                qtd_inimigos = rodada * 2
+                for i in range(qtd_inimigos):
+                    inimigo = Personagem(nome_personagem=f"Inimigo {i+1}",
+                                         classe=Barbaro(),
+                                         inventario=[])
+                    inimigos.append(inimigo)
 
             vivos_inimigos = inimigos.copy()
 
